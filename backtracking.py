@@ -43,7 +43,7 @@ def is_same_diagonal(x1, y1, x2, y2):
 
 
 def get_diagonals(board, row, col):
-    return [board[i][j] for i in range(len(board)) for j in range(len(board)) if is_same_diagonal(row, col, i, j)]
+    return [board[i][j] for i in range(row) for j in range(len(board)) if is_same_diagonal(row, col, i, j)]
 
 
 def place_queen(board, row, col):
