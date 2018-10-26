@@ -53,5 +53,3 @@ def place_queen(board, row, col):
 def remove_queen(board, row, col):
     board[row][col] = False
 
-
-n_queens()
