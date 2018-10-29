@@ -19,4 +19,39 @@ def has_array_two_candidates(arr, total):
 # driver program to check the above function
 A = [1, 4, 45, 6, 10, 7]
 n = 11
-print(has_array_two_candidates(A, n))
+# print(has_array_two_candidates(A, n))
+
+
+def find_pairs(arr1, arr2, total):
+    arr1_set = set(arr1)
+
+    result = set()
+
+    for item in arr2:
+        if total - item in arr1_set:
+            result.add((item, total - item))
+
+    return result
+
+
+# arr1 = [1, 0, -4, 7, 6, 4]
+# arr2 = [0, 2, 4, -3, 2, 1]
+# x = 8
+# print(find_pairs(arr1, arr2, x))
+
+
+# Given an integer array and a positive integer k, count all distinct pairs with difference equal to k.
+def count_dif_k(arr, k):
+    count = 0
+
+    arr_set = set(arr)
+
+    for item in arr:
+        if item - k in arr_set or item + k in arr_set:
+            count += 1
+        arr_set.remove(item)
+
+    return count
+
+
+# print(count_dif_k([1, 5, 3, 4, 2], 3))

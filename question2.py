@@ -40,3 +40,40 @@ def count_pairs2(arr, total):
 
 
 print(count_pairs2([4, 1, 7, 2, 3, 3, 7, 5, 6], 10))
+
+
+def count_pairs3(arr1, arr2, value):
+    count = 0
+    left = 0
+    right = len(arr2) - 1
+
+    while left < len(arr1) and right >= 0:
+        # if this sum is equal to value, then increment 'left', decrement 'right' and increment'count'
+        if arr1[left] + arr2[right] == value:
+            left = left + 1
+            right = right - 1
+            count = count + 1
+
+        # if this sum is less than value, then increment left
+        elif (arr1[left] + arr2[right]) < value:
+            left = left + 1
+
+        # else decrement 'right'
+        else:
+            right = right - 1
+
+    return count
+
+
+def count_missing(arr, low, high):
+
+    arr_set = set(arr)
+    result = []
+    for item in range(low, high):
+        if item not in arr_set:
+            result.append(item)
+
+    return result
+
+
+
