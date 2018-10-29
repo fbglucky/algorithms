@@ -15,4 +15,3 @@ def splittable(arr):
 
 def is_word(arr):
     return ''.join(arr) in words.words()
-

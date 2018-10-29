@@ -27,3 +27,4 @@ def construct_subset(arr, total):
         return list(set().union(with_last, [last_elm]))
 
     return None
+
