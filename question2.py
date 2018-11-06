@@ -65,6 +65,22 @@ def count_pairs3(arr1, arr2, value):
     return count
 
 
+def find_triplet(arr, total):
+    count = 0
+
+    for i in range(len(arr)):
+        # Find pair in sub array arr[i+1..n-1]
+        # with sum equal to sum - arr[i]
+        s = set()
+        curr_sum = total - arr[i]
+        for j in range(i + 1, len(arr)):
+            if (curr_sum - arr[j]) in s:
+                count += 1
+            s.add(arr[j])
+
+    return count
+
+
 def count_missing(arr, low, high):
 
     arr_set = set(arr)
