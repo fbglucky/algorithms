@@ -1,4 +1,4 @@
-from game_entry import GameEntry
+from data_structures.game_entry import GameEntry
 
 
 class Scoreboard:
