@@ -2,7 +2,7 @@ def count_bits(x):
     num_bits = 0
     while x:
         num_bits += x & 1
-        x >>= 1
+        x >>= 1  # right shift 1 bit (/2), then reassign to itself (x)
 
     return num_bits
 
