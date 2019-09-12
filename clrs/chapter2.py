@@ -14,9 +14,6 @@ ls = [31, 41, 59, 26, 41, 58]
 insert_sort(ls, lambda x, y: x < y)
 
 
-# print(ls)
-
-
 def add_n_bit_integer(i1, i2):
     result = [0] * (len(i1) + 1)
 
