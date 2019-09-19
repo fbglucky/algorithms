@@ -19,7 +19,7 @@ def has_array_two_candidates(arr, total):
 # driver program to check the above function
 A = [1, 4, 45, 6, 10, 7]
 n = 11
-# print(has_array_two_candidates(A, n))
+print(has_array_two_candidates(A, n))
 
 
 def find_pairs(arr1, arr2, total):
